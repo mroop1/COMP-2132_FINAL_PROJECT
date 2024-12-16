@@ -1,0 +1,175 @@
+/* ------------ Rule Query ----------- */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap");
+/* ------------ Variables ------------ */
+/* ---------- Element Query ---------- */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Oswald", sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #004FFF;
+  color: #262626;
+}
+
+figure {
+  max-width: 270px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  margin: 0.5rem;
+}
+
+/* --------- Class Selectors --------- */
+.hangman-box h1 {
+  font-size: 1.45rem;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.game-box h4 {
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.game-box h4 strong {
+  font-weight: 600;
+}
+
+.game-box .guesses-text strong {
+  color: black;
+}
+
+.game-box .keyboard div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+:where(.game-model, .keyboard) button {
+  font-size: 1rem;
+  border-radius: 5px;
+  background: #262626;
+  color: #C3F73A;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+:where(.game-model, .keyboard) button:hover {
+  background: #404040;
+}
+:where(.game-model, .keyboard) button:disabled {
+  background: #262626;
+  cursor: not-allowed;
+}
+
+.keyboard button {
+  width: 1.5rem;
+}
+
+.game-outcome-content {
+  background: #B4B8AB;
+  max-width: 420px;
+  width: 100%;
+  text-align: center;
+  border-radius: 20px;
+  padding: 1rem;
+}
+
+.game-outcome-content img {
+  max-width: 130px;
+}
+
+.game-outcome-content h4 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: black;
+}
+
+.game-outcome-content p {
+  font-size: 1.5rem;
+  margin: 1rem 0 1.5rem;
+  font-weight: 500;
+  color: #262626;
+}
+
+.game-outcome-content p strong {
+  color: #C3F73A;
+  font-weight: 600;
+}
+
+.game-outcome-content button {
+  font-size: 1rem;
+  border-radius: 5px;
+  background: #004FFF;
+  color: #262626;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  border-radius: 20px;
+  box-shadow: 0 0 12px 2px black;
+}
+.game-outcome-content button:hover {
+  background: #3372ff;
+}
+.game-outcome-content button:disabled {
+  background: #262626;
+  cursor: not-allowed;
+}
+
+.game-outcome-content button:hover {
+  background-color: #C3F73A;
+  color: #262626;
+}
+
+/* ----------- ID Selectors ---------- */
+#wrapper {
+  width: 850px;
+  display: flex;
+  gap: 70px;
+  align-items: flex-end;
+  margin: 0 auto;
+  padding: 60px 40px;
+  border-radius: 20px;
+  background-color: #FF007F;
+  box-shadow: 0 0 12px 2px black;
+}
+
+#word_display {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+  justify-content: center;
+}
+
+#word_display .letter {
+  width: 2rem;
+  border-bottom: 3px solid #262626;
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+#game_outcome_popup {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.6);
+}

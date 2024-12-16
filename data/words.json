@@ -1,0 +1,26 @@
+[
+    {
+        "word":"JAVASCRIPT",
+        "hint":"A programming language"
+    },
+    {
+        "word":"PYTHON",
+        "hint":"A snake and a type of language"
+    },
+    {
+        "word":"DATABASE",
+        "hint":"Organized collection of data"
+    },
+    {
+        "word":"ALGORITHM",
+        "hint":"A set of calculations to solve problems"
+    },
+    {
+        "word":"NETWORK",
+        "hint":"A system of sharing information"
+    },
+    {
+        "word":"LINUX",
+        "hint":"A free and open source OS"
+    }
+]

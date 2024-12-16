@@ -1,0 +1,173 @@
+/* ------------ Rule Query ----------- */
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap');
+@mixin button-styles($bg-color, $text-color) {
+    font-size: 1rem;
+    border-radius: 5px;
+    background: $bg-color;
+    color: $text-color;
+    cursor: pointer;
+
+    &:hover {
+        background: lighten($bg-color, 10%);
+    }
+
+    &:disabled {
+        background: $eerie_black;
+        cursor: not-allowed;
+    }
+}
+/* ------------ Variables ------------ */
+$risd_blue: #004FFF;
+$rose: #FF007F;
+$eerie_black: #262626;
+$lime: #C3F73A;
+$ash_gray: #B4B8AB;
+/* ---------- Element Query ---------- */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Oswald", sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: $risd_blue;
+    color: $eerie_black;
+}
+
+figure{
+    max-width: 270px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    margin: 0.5rem;
+}
+/* --------- Class Selectors --------- */
+.hangman-box h1 {
+    font-size: 1.45rem;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.game-box h4 {
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.game-box h4 strong {
+    font-weight: 600;
+}
+
+.game-box .guesses-text strong {
+    color: black;
+}
+
+.game-box .keyboard div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+:where(.game-model, .keyboard) button {
+    @include button-styles($eerie_black, $lime);
+    margin-top: 1rem;
+}
+
+.keyboard button {
+    width: 1.5rem;
+}
+
+.game-outcome-content {
+    background: $ash_gray;
+    max-width: 420px;
+    width: 100%;
+    text-align: center;
+    border-radius: 20px;
+    padding: 1rem;
+}
+
+.game-outcome-content img {
+    max-width: 130px;
+}
+
+.game-outcome-content h4 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.game-outcome-content p {
+    font-size: 1.5rem;
+    margin: 1rem 0 1.5rem;
+    font-weight: 500;
+    color: $eerie_black;
+}
+
+.game-outcome-content p strong {
+    color: $lime;
+    font-weight: 600;
+}
+
+.game-outcome-content button {
+    @include button-styles($risd_blue, $eerie_black);
+    padding: 1rem 2rem;
+    border-radius: 20px;
+    box-shadow: 0 0 12px 2px black;
+}
+
+.game-outcome-content button:hover {
+    background-color: $lime;
+    color: $eerie_black;
+}
+/* ----------- ID Selectors ---------- */
+#wrapper {
+    width: 850px;
+    display: flex;
+    gap: 70px;
+    align-items: flex-end;
+    margin: 0 auto;
+    padding: 60px 40px;
+    border-radius: 20px;
+    background-color: $rose;
+    box-shadow: 0 0 12px 2px black;
+}
+
+#word_display {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    justify-content: center;
+}
+
+#word_display .letter {
+    width: 2rem;
+    border-bottom: 3px solid $eerie_black;
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+#game_outcome_popup {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.6);
+   }

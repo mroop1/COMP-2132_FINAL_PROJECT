@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Project | Hangman Game</title>
+
+    <link rel="stylesheet" href="../css/styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script src="../scripts/script.js" defer></script>
+</head>
+<body>
+    <aside id="game_outcome_popup">
+        <div class="game-outcome-content">
+            <img src="../images/lost.gif" alt="game over gif" id="game_result_gif">
+            <h4 id="game_result">Game over!</h4> 
+            <p>The correct word was <strong id="correct_word"></strong></p> <!--Display the correct guess here-->
+            <button id="play_again">Play Again</button>
+        </div>
+    </aside>
+    
+    <div id="wrapper">
+        <section class="hangman-box">
+            <button id="replay"><i class="small material-icons">replay</i></button>
+            <figure>
+                <img src="../images/hangman-0.svg" alt="The hanging post" id="hangman_image">
+                <figcaption></figcaption> <!--Add a message that tells the player how many guess they have left-->
+            </figure>
+            <h1>Hangman Game</h1>
+        </section>
+        
+        <section class="game-box">
+            <ul id="word_display"></ul>
+            <h4 class="hint">Hint:<strong id="hint_message"></strong></h4>
+            <h4 class="guesses-text">Incorrect Guesses: <strong id="remaining_guesses"> 0/6 </strong></h4> <!-- i.e. 0/6 correct guesses-->
+            <div class="keyboard">
+                <div>
+                    <button class="btn-letter">A</button><button class="btn-letter">B</button><button class="btn-letter">C</button><button class="btn-letter">D</button><button class="btn-letter">E</button><button class="btn-letter">F</button><button class="btn-letter">G</button><button class="btn-letter">H</button><button class="btn-letter">I</button><button class="btn-letter">J</button>
+                </div>
+                <div>
+                    <button class="btn-letter">K</button><button class="btn-letter">L</button><button class="btn-letter">M</button><button class="btn-letter">N</button><button class="btn-letter">O</button><button class="btn-letter">P</button><button class="btn-letter">Q</button><button class="btn-letter">R</button><button class="btn-letter">S</button>
+                </div>
+                <div>
+                    <button class="btn-letter">T</button><button class="btn-letter">U</button><button class="btn-letter">V</button><button class="btn-letter">W</button><button class="btn-letter">X</button><button class="btn-letter">Y</button><button class="btn-letter">Z</button>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
